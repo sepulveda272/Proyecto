@@ -1,16 +1,18 @@
-document.addEventListener('DOMContentLoaded',cambio)
-function cambio(){
-    const btn = document.querySelector('#registrarB');
-    const cambio = document.querySelector('.registroD');
-    btn.addEventListener('click',()=>{
-        cambio.innerHTML=`
-        <div class="titulo">
-            <img id="logo" src="../img/logoRVG.png" alt="Not Found">
-            <h1>Bacteriologia_RVG</h1>
-            
-        </div>
-        
-        `
-    })
-}
+const boton = document.querySelector('#registrarB');
+const botonRegistrar = document.querySelector('#registrarseB')
+const registroD = document.querySelector('.registroD');
+const registroUser = document.querySelector('.registroUser')
 
+boton.addEventListener('click', ()=>{
+    if(registroUser.classList.contains('oculto')){
+        registroUser.classList.remove('oculto');
+        registroD.classList.add('oculto')
+    }
+})
+
+botonRegistrar.addEventListener('click', ()=>{   
+    if(registroD.classList.contains('oculto')){
+        registroD.classList.remove('oculto');
+        registroUser.classList.add('oculto')
+    }
+})
