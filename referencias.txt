@@ -1,6 +1,7 @@
 REQUERIMIENTOS
 
 Registrar bacteriologo
+-imagen del bacteriologo
 -nombre del bacteriologo
 -edad del bacteriologo
 -cedula del bacteriologo
@@ -44,12 +45,5 @@ Registrar los resultados de la glisemia
 
 Registrar usuarios
 -nombre de usuario
--fecha de nacimiento (dia,mes,año)
 -correo
 -password
-
-
--Salud ocupacional (cómo contratación).
--Inventarios de utilidades.
--Mercado y cotizaciomes.
--Domicilios y rutas.
