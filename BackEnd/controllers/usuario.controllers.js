@@ -1,4 +1,5 @@
 const Usuario = require('../models/Usuario.js');
+const bcryptjs = require('bcryptjs');
 
 const getUsers = (req, res)=>{
     res.json({
