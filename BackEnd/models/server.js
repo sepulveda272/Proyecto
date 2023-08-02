@@ -1,6 +1,6 @@
-import express from 'express';
-import cors from 'cors';
-import { dbConnection } from '../database/config.js';
+const express = require('express');
+const cors = require('cors');
+const {dbConnection} = require('../database/config.js');
 
 class Server{
     constructor(){
@@ -19,11 +19,10 @@ class Server{
     middleware(){
         this.app.use(cors());
         this.app.use(express.json());
-        this.app.use(express.static('public'))
     }
 
     routes(){
-        this.app.use(this.usuariosPath, require('../routes/usuarioR.routes.js'));
+        this.app.use(this.usuariosPath, require('../routes/usuario.routes.js'));
     }
 
     listen(){
@@ -33,4 +32,4 @@ class Server{
     }
 }
 
-export default Server
+module.exports = Server;
