@@ -3,7 +3,6 @@
     padding: 0;
     height: 100%;
     overflow: hidden;
-    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -20,11 +19,3 @@
 }
 
 /* parte derecha */
-
-.content{
-    display: flex;
-    width: 89%;
-    height: 95%;
-    background-color: white;
-    border-radius: 20px;
-}
