@@ -19,8 +19,7 @@ const UsuarioSchema = Schema({
 
     rol:{
         type: String,
-        required: true,
-        default: 'BACT',
+        default: 'BACT'
         /* enum: ['BACT','PCT'] */
     },
 
@@ -31,7 +30,7 @@ const UsuarioSchema = Schema({
 
     googleSignIn:{
         type: Boolean,
-        default: false
+        default: true
     }
 });
 

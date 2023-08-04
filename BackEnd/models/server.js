@@ -8,6 +8,11 @@ class Server{
         this.port = process.env.PORT;
         this.usuariosPath = "/api/usuarios"
         this.authPath = "/api/auth";
+        this.pacientesPath = "/api/pacientes";
+        this.bacteriologosPath = "/api/bacteriologos";
+        this.cuadroHematicoPath = "/api/cuadroHematico";
+        this.glisemiaPath = "/api/glisemia";
+        this.perfilLipidicoPath = "/api/perfilLipidico";
         this.connectDB();
         this.middleware();
         this.routes();
@@ -25,6 +30,11 @@ class Server{
     routes(){
         this.app.use(this.authPath, require('../routes/auth.routes.js'));
         this.app.use(this.usuariosPath, require('../routes/usuario.routes.js'));
+        this.app.use(this.pacientesPath, require('../routes/pacientes.routes.js'));
+        this.app.use(this.bacteriologosPath, require('../routes/bacteriologo.routes.js'));
+        this.app.use(this.cuadroHematicoPath, require('../routes/cuadroHematico.routes.js'));
+        this.app.use(this.glisemiaPath, require('../routes/glisemia.routes.js'));
+        this.app.use(this.perfilLipidicoPath, require('../routes/perfilLipidico.routes.js'));
     }
 
     listen(){
