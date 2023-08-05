@@ -26,6 +26,11 @@ const BacteriologoSchema = Schema({
         required: [true, 'La cedula es obligatorio'],
         trim: true,
     },
+    imagen:{
+        type: String,
+        required: true,
+        trim: true
+    },
     estado:{
         type: Boolean,
         default: true

@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="contenedorPerfil">
-                        <img id="fotoPerfil" src="../img/fotoPerfil.jpeg" alt="">
+                        <img style="height: 100%;" id="fotoPerfil" src="../img/fotoPerfil.jpeg" alt="">
                     </div>
                 </div>
             </nav>
@@ -106,9 +106,45 @@
                 <div class="backgrouncito">
                     <p>Nuevo bacteriologo</p>
                 </div>
+                <div class="mrd">
+                    <form method="post" class="row g-3 formularioB" id="formBacteriologo">
+                        <div class="col-md-12">
+                            <label for="inputImagen" class="form-label">Imagen</label>
+                            <input type="text" class="form-control" id="inputImagen">
+                          </div>
+                        <div class="col-md-6">
+                          <label for="inputNombre" class="form-label">Nombre del Bacteriologo</label>
+                          <input type="text" class="form-control" id="inputNombre">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputEdad" class="form-label">Edad</label>
+                          <input type="number" class="form-control" id="inputEdad">
+                        </div>
+                        <div class="col-6">
+                          <label for="inputEmail" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                        <div class="col-6">
+                          <label for="inputAñosEx" class="form-label">Años de experiencia</label>
+                          <input type="text" class="form-control" id="inputAñosEx">
+                        </div>
+                        
+                        <div class="t">
+                            <div class="col-md-5">
+                                <label for="inputCedula" class="form-label">Cedula</label>
+                                <input type="number" class="form-control" id="inputCedula">
+                            </div>
+                            <div>
+                                <a href="./bateriologo.html" class="btn btn-danger">Cancelar</a>
+                                <button type="submit" class="btn btn-warning">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <script type="module" src="./Rbacteriologo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

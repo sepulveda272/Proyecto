@@ -1,0 +1,69 @@
+.card {
+    width: 260px !important;
+    height: 401px !important;
+    background: #2E295F !important;
+    border-radius: 15px !important;
+    box-shadow: 1px 5px 60px 0px #100a886b !important;
+    margin-top: 10px;
+   }
+   
+   .card .card-border-top {
+    width: 60% !important;
+    height: 3% !important;
+    background: #2E295F !important;
+    margin: auto !important;
+    border-radius: 0px 0px 15px 15px !important;
+   }
+   
+   .card span {
+    font-weight: 600 !important;
+    color: white !important;
+    text-align: center !important;
+    display: block !important;
+    padding-top: 10px !important;
+    font-size: 16px !important;
+   }
+   
+   .card .job {
+    font-weight: 400 !important;
+    color: white !important;
+    display: block !important;
+    text-align: center !important;
+    font-size: 16px !important;
+   }
+   
+   .card .img {
+    width: 119px !important;
+    height: 117px !important;
+    background: #6b64f3 !important;
+    border-radius: 119px !important;
+    margin: auto !important;
+    margin-top: 25px !important;
+   }
+   
+   .info{
+   display: flex !important;
+   flex-direction: column !important;
+   }
+   
+   .card button {
+    padding: 8px 25px !important;
+    margin-left: 10px !important;
+    margin-bottom: 10px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    margin-top: 30px !important;
+    color: white !important;
+    font-weight: 600 !important;
+   }
+   
+   .card button:hover {
+    background: #534bf3 !important;
+   }
+   
+
+   .info p{
+    margin-bottom: 0;
+    color: white;
+    margin-left: 3rem;
+   }

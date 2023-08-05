@@ -17,8 +17,8 @@ const getBacteriologo = async(req,res)=>{
 }
 
 const postBacteriologo = async(req, res ) => {
-    const {nombre, edad, email, experiencia, cedula} = req.body;
-    const bacteriologo = new Bacteriologo({nombre, edad, email, experiencia, cedula});
+    const {nombre, edad, email, experiencia, cedula,imagen} = req.body;
+    const bacteriologo = new Bacteriologo({nombre, edad, email, experiencia, cedula, imagen});
 
     const emailExists = await Bacteriologo.findOne({email});
     if(emailExists){
@@ -56,7 +56,8 @@ const updateBacteriologo = async(req, res)=>{
     const email = req.body.email;
     const experiencia = req.body.experiencia;
     const cedula = req.body.cedula;
-    const bacteriologo = await Bacteriologo.findByIdAndUpdate(id, {nombre,edad,email,experiencia,cedula},{ new: true });
+    const imagen = req.body.imagen
+    const bacteriologo = await Bacteriologo.findByIdAndUpdate(id, {nombre,edad,email,experiencia,cedula,imagen},{ new: true });
     return res.status(200).json({bacteriologo,
         msg : 'El bacteriologo fue actualizado correctamente'
     });

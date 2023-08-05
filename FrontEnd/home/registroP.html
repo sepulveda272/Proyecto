@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="contenedorPerfil">
-                        <img id="fotoPerfil" src="../img/fotoPerfil.jpeg" alt="">
+                        <img style="height: 100%;" id="fotoPerfil" src="../img/fotoPerfil.jpeg" alt="">
                     </div>
                 </div>
             </nav>
@@ -106,10 +106,66 @@
                 <div class="backgrouncito">
                     <p>Nuevo paciente</p>
                 </div>
+                <div class="mrd">
+                    <form method="post" class="row g-3 formularioP" id="formPaciente">
+                        <div class="col-md-8">
+                          <label for="inputNombre" class="form-label">Nombre del paciente</label>
+                          <input type="text" class="form-control" id="inputNombre">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputEdad" class="form-label">Edad</label>
+                          <input type="number" class="form-control" id="inputEdad">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputSexo" class="form-label">Sexo</label>
+                            <select id="inputSexo" class="form-select">
+                                <option selected>Genero...</option>
+                                <option>Hombre</option>
+                                <option>Mujer</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-8">
+                          <label for="inputDireccion" class="form-label">Direccion del paciente</label>
+                          <input type="text" class="form-control" id="inputDireccion">
+                        </div>
+                        <div class="col-4">
+                          <label for="inputCelular" class="form-label">Celular</label>
+                          <input type="number" class="form-control" id="inputCelular">
+                        </div>
+                        <div class="col-md-2">
+                          <label for="inputFecha" class="form-label">Fecha de atencion</label>
+                          <input type="date" class="form-control" id="inputFecha">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputHora" class="form-label">Hora</label>
+                            <input type="time" class="form-control" id="inputHora">
+                        </div>
+                        <div class="col-md-8">
+                          <label for="inputBacteriologo" class="form-label">Bacteriologo</label>
+                          <input type="text" class="form-control" id="inputBacteriologo">
+                        </div>
+                        <div class="t">
+                            <div class="col-md-4">
+                                <label for="inputExamen" class="form-label">Tipo de examen</label>
+                                <select id="inputExamen" class="form-select">
+                                  <option selected>Examen</option>
+                                  <option>Cuadro Hematico</option>
+                                  <option>Glisemia</option>
+                                  <option>PerfilLipidico</option>
+                                </select>
+                            </div>
+                            <div>
+                                <a href="./home.html" class="btn btn-danger">Cancelar</a>
+                                <button type="submit" class="btn btn-warning">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    
+    <script type="module" src="./Rpaciente.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,28 +1,29 @@
-const url = "http://localhost:5000/api/pacientes"
+const url = "http://localhost:5000/api/bacteriologos"
 
 
-export const obtenerPaciente = async () => {
+export const obtenerBacteriologo = async () => {
     try {
-        const pacientes = await fetch(url);
-        const datosPacientes = await pacientes.json();
-        return datosPacientes;
+        const bacteriologos = await fetch(url);
+        const datoBacteriologo = await bacteriologos.json();
+        console.log(datoBacteriologo);
+        return datoBacteriologo;
     } catch (error) {
         console.log(error,"no sirve");
     }
 };
 
 
-export const nuevoPacientes = async (pacientes) => {
+export const nuevoBacteriologo = async (bacteriologos) => {
     try {
         const response = await fetch(url, {
             method: "POST",
-            body: JSON.stringify(pacientes),
+            body: JSON.stringify(bacteriologos),
             headers: { 'Content-Type': 'application/json' }
         });
 
         if (response.ok) {
             // La solicitud se ha realizado correctamente (código de respuesta 200-299)
-            window.location.href ="home.html"
+            window.location.href ="bateriologo.html"
             console.log("Paciente agregado exitosamente");
         } else {
             // Si el servidor responde con un código de error
@@ -35,19 +36,19 @@ export const nuevoPacientes = async (pacientes) => {
 };
 
 
-export const deletePacientes = async (_id) => {
+export const deleteBacteriologo = async (_id) => {
   try {
         await fetch(`${url}/${_id}`,{
             method:'DELETE'
         })
-        window.location.href ="home.html"
+        window.location.href ="bateriologo.html"
     } catch (error) {
         console.log(error);
     }
 };
 
 
-export const editarPacientes = async (datos) => {
+export const editarBacteriologo = async (datos) => {
     try {
         await fetch(`${url}/${datos._id}`, {
             method: "PUT",
@@ -56,7 +57,7 @@ export const editarPacientes = async (datos) => {
         }).then(response => response.json()).then(updatedDatos => {
             console.log('Datos actualizados:', updatedDatos);
         });
-        window.location.href ="home.html"
+        window.location.href ="bateriologo.html"
     } catch (error) {
       console.error('Error al actualizar los datos:', error);
     }
