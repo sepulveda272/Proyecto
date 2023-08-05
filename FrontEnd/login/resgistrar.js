@@ -1,4 +1,4 @@
-import { nuevoRegistro/* ,logeate */ } from "./API.js";
+import { nuevoRegistro,logeate } from "./API.js";
 
 const formulario = document.querySelector("#formRegistre")
 formulario.addEventListener('submit', validarRegistro)
@@ -24,11 +24,12 @@ function validarRegistro(e){
 
 }
 
-/* const formularioLogin = document.querySelector("#formlogin");
+const formularioLogin = document.querySelector("#formlogin");
 formularioLogin.addEventListener('submit', validarLogin);
 
 function validarLogin(e){
     e.preventDefault();
+    console.log(1);
     const email = document.querySelector("#emailLogin").value;
     const password = document.querySelector("#passwordLogin").value;
 
@@ -43,9 +44,11 @@ function validarLogin(e){
         return;
     }
 
+    console.log("registrado");
+
     // Llamar a la función para loguearse
     logeate(registroLogin);
-} */
+}
 
 
 
