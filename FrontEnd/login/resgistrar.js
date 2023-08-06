@@ -24,7 +24,7 @@ function validarRegistro(e){
 
 }
 
-const formularioLogin = document.querySelector("#formlogin");
+/* const formularioLogin = document.querySelector("#formlogin");
 formularioLogin.addEventListener('submit', validarLogin);
 
 function validarLogin(e){
@@ -38,7 +38,6 @@ function validarLogin(e){
         password
     };
 
-    // Validar campos (en este caso, solo comprobamos que no estén vacíos)
     if (!email || !password) {
         alert('Todos los campos son obligatorios');
         return;
@@ -46,7 +45,6 @@ function validarLogin(e){
 
     console.log("registrado");
 
-    // Llamar a la función para loguearse
     logeate(registroLogin);
 }
 
@@ -55,4 +53,37 @@ function validarLogin(e){
 function validate(objeto){
     return !Object.values(objeto).every( element => element !=='');
 
-} 
+}  */
+
+const formularioLogin = document.querySelector("#formlogin");
+formularioLogin.addEventListener('submit', validarLogin);
+
+async function validarLogin(e) {
+    e.preventDefault();
+    const correo = document.querySelector('#emailLogin');
+    const contraseña = document.querySelector('#passwordLogin');
+
+    const datos = {
+        email : correo.value,
+        password : contraseña.value,
+    };
+
+ 
+        const response = await logeate(datos);
+        if (response) {
+            alert("¡Enviado!");
+            setTimeout(()=>{
+                window.location = '../home/home.html';
+
+            },2000)
+
+
+       }else{
+        alert("Cancelado");
+            setTimeout(()=>{
+                window.location = 'index.html';
+
+            },2000)
+       }
+
+}

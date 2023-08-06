@@ -14,7 +14,7 @@ export const nuevoRegistro =  async (resgistros) =>{
     }
 }
 
-export const logeate = async (login) => {
+/* export const logeate = async (login) => {
     try {
         await fetch(urlLogin, {
             method: "POST",
@@ -22,13 +22,25 @@ export const logeate = async (login) => {
             headers: { 'Content-Type': 'application/json' }
         });
         window.location.href = "../home/home.html"
-        /* const data = await response.json();
-        if (data.success) {
-            window.location.href = "../home/home.html";
-        } else {
-            alert("Inicio de sesión fallido. Verifica tus credenciales.");
-        } */
     } catch (error) {
         console.log(error, "Error en el inicio de sesión.");
+    }
+}; */
+
+export const logeate = async (datos) => {
+    try {
+        const response = await fetch(urlLogin, {
+            method: 'POST',
+            body: JSON.stringify(datos),
+            headers: { 'Content-Type': 'application/json' }
+        });
+        /* window.location.href ="../home/home.html" */
+        const data = await response.json();
+
+        if (response.ok) {
+            return data;
+        }
+    } catch (error) {
+        console.log(error);
     }
 };

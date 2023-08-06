@@ -27,8 +27,10 @@ const login = async (req,res= response)=>{
         }
 
         res.json({
-            msg: "All good duuuuuude"
+            msg: "All good duuuuuude",
+            success: true
         })
+
     } catch (error) {
         console.log(error);
         return res.json({
