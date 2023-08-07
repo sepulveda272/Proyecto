@@ -16,14 +16,14 @@ async function mostrarLista() {
     let contenidoHTML = "";
 
     arrayPacientes.forEach((elemento) => {
-        const { idPaciente, nombre, examen,_id } = elemento;
+        const { idPaciente, nombre, examen,edad,fecha,hora,_id } = elemento;
         contenidoHTML += `
         <tr>
             <th scope="row">${idPaciente}</th>
             <td>${nombre}</td>
             <td>${examen}</td>
             <td>
-                <button class="btn obte" id="${idPaciente}" nombre=${nombre} style="background-color: #937DE9; color: white; width: 100px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button class="btn obte" id="${idPaciente}" nombre=${nombre} edad=${edad} examen=${examen} fecha=${fecha} hora=${hora} style="background-color: #937DE9; color: white; width: 100px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
             VER
           </button>
             </td>
@@ -45,7 +45,11 @@ function obteneId(e){
     if(e.target.classList.contains('obte')){
         const _id = e.target.getAttribute('id')
         const nombre = e.target.getAttribute('nombre')
-        console.log(_id,nombre); 
+        const edad = e.target.getAttribute('edad')
+        const examen = e.target.getAttribute('examen')
+        const fecha = e.target.getAttribute('fecha')
+        const hora = e.target.getAttribute('hora')
+        console.log(_id,nombre,edad,examen,fecha,hora); 
     }
 }
 
@@ -67,7 +71,7 @@ async function mostrarListac() {
         
         const { hematocrito,hemoglobina,eritrocitos,leucositos,neutrofilos,eosinofilos,linfocitos,plaquetas,proteinasTotales,idExamenCuadro } = elemento;
         const { fecha,examen,hora, nombre,edad,idPaciente} = paciente
-        contenidoHTML += `
+        contenidoHTML = `
         <div style="height: 93px;" class="modal-header">
                 <div>
                     <h3>RESULTADOS</h3>
