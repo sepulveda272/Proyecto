@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;/* 
+    height: 100%; */
+    overflow: hidden;
+}
+
+
+/* toda la pantalla */
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 62rem;
+    background-image: url("../../img/Frame\ 3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 50px;
+}
+
+#content{
+    padding-bottom: 0 !important;
+}
+
+/* parte derecha */
+#informacion{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+#tabla1{
+    width: 50%;
+    height: 100%;
+}
+#botones-grandes{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+nav{
+    height: 25%;
+}
+
+#naranja{
+    height: 4rem;
+    width: 11rem;
+    border: none;
+    background-color: rgb(250, 143, 81);
+    color: white;
+    border-radius: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+#gris{
+    height: 4rem;
+    width: 11rem;
+    border: none;
+    background-color: rgb(218, 213, 213);
+    color: white;
+    border-radius: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#nombre-resultado{
+    height: 80%;
+    width: 100%;
+    border: 1px solid red;
+}
+
+#tabla2{
+    width: 50%;
+    height: 100%;
+}
+#resultados{
+    height: 100%;
+    width: 95%;
+    border-radius: 15px;
+    padding: 0.8rem 1.4rem;
+    background-color: rgb(231, 231, 231);
+}
+#titulo{
+    height: 7%;
+    font-weight: 700;
+    font-size: 27px;
+    border-bottom: solid black;
+}
+#tabla-resultados{
+    height: 83%;
+    width: 100%;
+}
+
+#botones-peque{
+    height: 295px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+#cancelar{
+    height: 2.5rem;
+    width: 11rem;
+    border: none;
+    background-color: rgb(243, 175, 48);
+    color: white;
+    border-radius: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+#guardar{
+    height: 2.5rem;
+    width: 11rem;
+    border: none;
+    background-color: rgb(53, 137, 248);
+    color: white;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+}

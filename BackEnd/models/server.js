@@ -13,6 +13,7 @@ class Server{
         this.cuadroHematicoPath = "/api/cuadroHematico";
         this.glisemiaPath = "/api/glisemia";
         this.perfilLipidicoPath = "/api/perfilLipidico";
+        this.searchPath = "/api/search";
         this.connectDB();
         this.middleware();
         this.routes();
@@ -35,6 +36,7 @@ class Server{
         this.app.use(this.cuadroHematicoPath, require('../routes/cuadroHematico.routes.js'));
         this.app.use(this.glisemiaPath, require('../routes/glisemia.routes.js'));
         this.app.use(this.perfilLipidicoPath, require('../routes/perfilLipidico.routes.js'));
+        this.app.use(this.searchPath, require('../routes/search.routes.js'));
     }
 
     listen(){

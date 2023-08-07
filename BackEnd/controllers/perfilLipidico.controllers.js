@@ -1,6 +1,15 @@
 const PerfilLipidico = require('../models/PerfilLipidico')
 
-const getPerfilLipidico = async(req,res)=>{
+const getPerfil = async (req,res) =>{
+    try {
+        const perfi = await PerfilLipidico.findOne({idExamenPerfil:req.params.id})
+        res.json(perfi);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const getPerfilLipidicos = async(req,res)=>{
     const { hasta, desde } = req.query;
     const query = {estado: true}
     const [ total, perfilLipidico ] = await Promise.all([
@@ -49,5 +58,5 @@ const updatePerfilLipidico = async(req, res)=>{
 }
 
 module.exports = {
-    getPerfilLipidico,postPerfilLipidico,deletePerfilLipidico,updatePerfilLipidico
+    getPerfil,getPerfilLipidicos,postPerfilLipidico,deletePerfilLipidico,updatePerfilLipidico
 }

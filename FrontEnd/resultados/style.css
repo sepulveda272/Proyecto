@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;/* 
+    height: 100%; */
+    overflow: hidden;
+}
+
+
+/* toda la pantalla */
+
+.contenedor {   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 62rem;
+    background-image: url("../img/Frame\ 3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 50px;
+}
+
+
+/* parte derecha */
+
+.taba{
+    /* Establecer una altura máxima para la sección */
+    max-height: 800px; /* Ajusta este valor según tus necesidades */
+    /* Establecer un overflow para habilitar el scroll */
+    overflow-y: auto;
+    height: 800px;
+}
+
+.d{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.taba table{
+    height: 5rem;
+}
+
+
+
+.mrd{
+    height: auto;
+    width: 92rem;
+    margin: 60px 300px 50px 38px;
+}
+
+.t{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#botones-peque{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+#cancelar{
+    height: 2.5rem;
+    width: 11rem;
+    border: none;
+    background-color: #FC3659;
+    color: white;
+    border-radius: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+#guardar{
+    height: 2.5rem;
+    width: 11rem;
+    border: none;
+    background-color: #2DB121;
+    color: white;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+}

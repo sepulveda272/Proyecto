@@ -1,6 +1,15 @@
 const CuadroHematico = require('../models/Cuadrohematico')
 
-const getCuadroHemarico = async(req,res)=>{
+const getCuadro = async (req,res) =>{
+    try {
+        const cuadro = await CuadroHematico.findOne({idExamenCuadro:req.params.id})
+        res.json(cuadro);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const getCuadroHemaricos = async(req,res)=>{
     const { hasta, desde } = req.query;
     const query = {estado: true}
     const [ total, cuadrohematico ] = await Promise.all([
@@ -52,5 +61,5 @@ const updateCuadroHematico = async(req, res)=>{
 }
 
 module.exports = {
-    getCuadroHemarico,postCuadroHemarico,deleteCuadroHemarico,updateCuadroHematico
+    getCuadro,getCuadroHemaricos,postCuadroHemarico,deleteCuadroHemarico,updateCuadroHematico
 }

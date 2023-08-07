@@ -24,36 +24,12 @@ function validarRegistro(e){
 
 }
 
-/* const formularioLogin = document.querySelector("#formlogin");
-formularioLogin.addEventListener('submit', validarLogin);
-
-function validarLogin(e){
-    e.preventDefault();
-    console.log(1);
-    const email = document.querySelector("#emailLogin").value;
-    const password = document.querySelector("#passwordLogin").value;
-
-    const registroLogin = {
-        email,
-        password
-    };
-
-    if (!email || !password) {
-        alert('Todos los campos son obligatorios');
-        return;
-    }
-
-    console.log("registrado");
-
-    logeate(registroLogin);
-}
-
-
-
 function validate(objeto){
     return !Object.values(objeto).every( element => element !=='');
 
-}  */
+}
+
+
 
 const formularioLogin = document.querySelector("#formlogin");
 formularioLogin.addEventListener('submit', validarLogin);
@@ -83,7 +59,7 @@ async function validarLogin(e) {
             setTimeout(()=>{
                 window.location = 'index.html';
 
-            },2000)
+            },200)
        }
 
 }

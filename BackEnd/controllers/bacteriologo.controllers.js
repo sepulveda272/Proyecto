@@ -1,6 +1,15 @@
 const Bacteriologo = require('../models/Bacteriologo')
 
-const getBacteriologo = async(req,res)=>{
+const getBacteriologo = async (req,res) =>{
+    try {
+        const bacteriologo = await Bacteriologo.findOne({_id:req.params.id})
+        res.json(bacteriologo);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const getBacteriologos = async(req,res)=>{
     const { hasta, desde } = req.query;
     const query = {estado: true}
     const [ total, bacteriologos ] = await Promise.all([
@@ -65,5 +74,5 @@ const updateBacteriologo = async(req, res)=>{
 
 
 module.exports = {
-    getBacteriologo,postBacteriologo,deleteBacteriologo,updateBacteriologo
+    getBacteriologo,getBacteriologos,postBacteriologo,deleteBacteriologo,updateBacteriologo
 }

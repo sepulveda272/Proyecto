@@ -1,9 +1,10 @@
 const {Router} = require('express');
-const {getGlisemia,postGlisemia,deleteGlisemia,updateGlisemia} = require('../controllers/glisemia.controllers.js');
+const {getGlisemiia,getGlisemias,postGlisemia,deleteGlisemia,updateGlisemia} = require('../controllers/glisemia.controllers.js');
 
 const router = Router();
 
-router.get('/',getGlisemia);
+router.get('/',getGlisemias);
+router.get('/:id',getGlisemiia);
 router.post("/",postGlisemia);
 router.delete("/:id",deleteGlisemia);
 router.put("/:id",updateGlisemia);

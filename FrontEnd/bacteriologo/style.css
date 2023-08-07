@@ -49,4 +49,6 @@
     /* Establecer un overflow para habilitar el scroll */
     overflow-y: auto;
     height: 800px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }

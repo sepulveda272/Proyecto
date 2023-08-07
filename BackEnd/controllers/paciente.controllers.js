@@ -1,6 +1,15 @@
 const Paciente = require('../models/Paciente')
 
-const getPaciente = async(req,res)=>{
+const getPaciente = async (req,res) =>{
+    try {
+        const paciente = await Paciente.findOne({idPaciente:req.params.id})
+        res.json(paciente);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const getPacientes = async(req,res)=>{
     const { hasta, desde } = req.query;
     const query = {estado: true}
     const [ total,pacientes ] = await Promise.all([
@@ -64,5 +73,5 @@ const patchPaciente = (req, res)=>{
 }
 
 module.exports = {
-    getPaciente,postPaciente,deletePaciente,updatePaciente,patchPaciente
+    getPaciente,getPacientes,postPaciente,deletePaciente,updatePaciente,patchPaciente
 }

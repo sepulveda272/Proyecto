@@ -1,6 +1,15 @@
 const Glisemia = require('../models/Glisemia')
 
-const getGlisemia = async(req,res)=>{
+const getGlisemiia = async (req,res) =>{
+    try {
+        const glisemia = await Glisemia.findOne({idExamenGlisemia:req.params.id})
+        res.json(glisemia);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const getGlisemias = async(req,res)=>{
     const { hasta, desde } = req.query;
     const query = {estado: true}
     const [ total, glisemia ] = await Promise.all([
@@ -45,5 +54,5 @@ const updateGlisemia = async(req, res)=>{
 }
 
 module.exports = {
-    getGlisemia,postGlisemia,deleteGlisemia,updateGlisemia
+    getGlisemiia,getGlisemias,postGlisemia,deleteGlisemia,updateGlisemia
 }

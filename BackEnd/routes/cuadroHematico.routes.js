@@ -1,9 +1,10 @@
 const {Router} = require('express');
-const {getCuadroHemarico,postCuadroHemarico,deleteCuadroHemarico,updateCuadroHematico} = require('../controllers/cuadroHematico.controllers.js');
+const {getCuadroHemaricos,postCuadroHemarico,deleteCuadroHemarico,updateCuadroHematico, getCuadro} = require('../controllers/cuadroHematico.controllers.js');
 
 const router = Router();
 
-router.get('/',getCuadroHemarico);
+router.get('/',getCuadroHemaricos);
+router.get('/:id',getCuadro)
 router.post("/",postCuadroHemarico);
 router.delete("/:id",deleteCuadroHemarico);
 router.put("/:id",updateCuadroHematico);

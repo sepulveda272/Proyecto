@@ -38,6 +38,14 @@
     border-radius: 8px;
 }
 
+.content nav .item-nav1 svg{
+    font-size: 1.8rem;
+    background-color: #997BE8;
+    padding: .8rem;
+    color: white;
+    border-radius: 8px;
+}
+
 .content nav .item-nav2{
     display: flex;
     height: auto;
