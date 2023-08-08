@@ -16,7 +16,7 @@ async function mostrarLista() {
     let contenidoHTML = "";
 
     arrayPacientes.forEach((elemento) => {
-        const { idPaciente, nombre, edad, nombreBacteriologo, hora,_id } = elemento;
+        const { idPaciente, nombre, edad, nombreBacteriologo, hora,_id,sexo,direccion,fecha,celular,examen } = elemento;
         contenidoHTML += `
         <tr>
             <th scope="row">${idPaciente}</th>
@@ -25,7 +25,18 @@ async function mostrarLista() {
             <td>${nombreBacteriologo}</td>
             <td>${hora}</td>
             <td>
-                <button class="btn update" idActualizar=${_id} style="background-color: #937DE9;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button class="btn update" idActualizar=${_id} 
+                nombre="${nombre}" 
+                edad="${edad}"
+                sexo="${sexo}"
+                direccion="${direccion}"
+                celular="${celular}"
+                fecha="${fecha}"
+                hora="${hora}"
+                nombreBacteriologo="${nombreBacteriologo}"
+                examen="${examen}"
+                
+                style="background-color: #937DE9;" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Actualizar
                 </button>
             </td>
@@ -67,13 +78,53 @@ function actualizar(e){
     if(e.target.classList.contains('update')){
         
         const idActualizar= e.target.getAttribute('idActualizar')
+
+        const nombre= e.target.getAttribute('nombre')
+        const edad= e.target.getAttribute('edad')
+        const sexo= e.target.getAttribute('sexo')
+        const direccion= e.target.getAttribute('direccion')
+        const celular= e.target.getAttribute('celular')
+        const fecha= e.target.getAttribute('fecha')
+        const hora= e.target.getAttribute('hora')
+        const nombreBacteriologo= e.target.getAttribute('nombreBacteriologo')
+        const examen= e.target.getAttribute('examen')
+
+        const nombreModla=document.querySelector('#nombreEdit')
+        nombreModla.value=nombre;
+
+        const edadModla=document.querySelector('#edadEdit')
+        edadModla.value=edad;
+        
+        const sexoModla=document.querySelector('#sexoEdit')
+        sexoModla.value=sexo;
+
+        const direccionModla=document.querySelector('#direccionEdit')
+        direccionModla.value=direccion;
+
+        const celularModla=document.querySelector('#celularEdit')
+        celularModla.value=celular;
+        
+        const fechaModla=document.querySelector('#fechaEdit')
+        fechaModla.value=fecha;
+        
+        const horaModla=document.querySelector('#horaEdit')
+        horaModla.value=hora;
+
+        const nombreBacModla=document.querySelector('#nombreBacEdit')
+        nombreBacModla.value=nombreBacteriologo;
+
+        const examenModla=document.querySelector('#examenEdit')
+        examenModla.value=examen;
+
         console.log(idActualizar);
 
         const datosNuw = document.querySelector('#formEditPaciente')
-        datosNuw.addEventListener('submit',uppdateCiclista)
+        datosNuw.addEventListener('submit',uppdatePaciente)
     
-    function uppdateCiclista(e){
+    function uppdatePaciente(e){
         e.preventDefault();
+        const nombrePaciente = e.target.getAttribute('nombre')
+        console.log(nombrePaciente);
         
         const nombre = document.querySelector('#nombreEdit').value
         const edad = document.querySelector('#edadEdit').value
