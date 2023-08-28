@@ -55,7 +55,7 @@ function obteneId(e){
         const nombre_Edad = document.querySelector('#nombre-edad')
         nombre_Edad.innerHTML=`
         <p class="form-label">Nombre: ${nombre}</p>
-        <p class="form-label">Edad:${edad} </p>
+        <p class="form-label">Edad: ${edad} </p>
         
         `
 

@@ -49,7 +49,7 @@ async function validarLogin(e) {
         if (response) {
             alert("¡Enviado!");
             setTimeout(()=>{
-                window.location = '../home/home.html';
+                window.location = './home/home.html';
 
             },2000)
 

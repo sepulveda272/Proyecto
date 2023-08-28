@@ -18,7 +18,7 @@ const urlOne = "http://localhost:5000/api/cuadroHematico"
 export const obtenerCuadroH = async (_id) => {
     console.log(_id);
     try {
-        const cuadroH = await fetch(urlC,`/`,_id);
+        const cuadroH = await fetch(urlOne,`/`,_id);
         console.log(cuadroH);
         const datosCuadroH = await cuadroH.json();
         return datosCuadroH;
